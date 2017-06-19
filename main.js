@@ -9,7 +9,7 @@ const main = () => {
     this._out = document.querySelector("pre#console-output");
     this.line = function() {
       console.log(...arguments);
-      this._out.innerHTML += "\n" + [...arguments].map(e => typeof e.toString == "function" ? e.toString() : e).join(" ");
+      this._out.innerHTML += "\n> " + [...arguments].map(e => typeof e.toString == "function" ? e.toString() : e).join(" ");
     };
   })();
   // }}}

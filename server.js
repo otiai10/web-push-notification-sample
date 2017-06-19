@@ -82,9 +82,11 @@ const controllers = {
    * `trigger` would trigger push-notification to all subscribers registered
    */
   trigger: (req, res) => {
+    const icon = `img/${Math.floor(Math.random() * 3)}.png`;
     const params = {
       title: "You've got a push-notification!!",
       msg:   `Hi, this is message from server. It"s ${new Date().toLocaleString()} now. You can send any message, e.g. notification icons and so`,
+      icon:  icon,
     };
     Promise.all(subscribers.map(subscription => {
       return webpush.sendNotification(subscription, JSON.stringify(params), {});
