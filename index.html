@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <script type="text/javascript" src="/main.js"></script>
+    <style>
+      button {display: block; font-weight: bold;}
+      pre {background-color: #292c34; color: #ddd;font-family: monospace; padding: 8px; min-height: 200px; overflow-x: scroll;}
+    </style>
+  </head>
+  <body>
+    <h1>Web Push Notification Sample</h1>
+    <div style="display:flex;">
+      <div style="padding-right:20px">
+        <p>
+          First, your JavaScript working on foreground must try to register ServiceWorker to browser.
+          <button id="register-sw">Register ServiceWorker</button>
+        </p>
+        <p>
+          Second, setup the ServiceWorker to subscribe remote push notification.
+          This action will provides you <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription">`PushSubscription`</a> model.
+          <button id="start-subscribe">Start Subscribe</button>
+        </p>
+        <p>
+          Now, you have three things.
+          <ol>
+            <li>
+              <a href="chrome://serviceworker-internals/" target="_blank">ServiceWorker</a>,
+              who has `endpoint` to publish  and is subscribing that publishment.
+            </li>
+            <li>
+              <a href="" target="_blank">Your Server</a>,
+              who stored subscription models and is ready to publish any stuff to subscribers.
+            </li>
+            <li>
+              Borwser JavaScript (I am!), who will let the server trigger push notification.
+              E.g User mentions to others and so.
+            </li>
+          </ol>
+          It's time to trigger them.
+          <button id="send-push">Send Push</button>
+        </p>
+      </div>
+      <div style="width:400px">
+        <pre id="console-output">...</pre>
+      </div>
+    </div>
+  </body>
+</html>

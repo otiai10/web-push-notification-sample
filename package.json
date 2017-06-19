@@ -1,0 +1,29 @@
+{
+  "name": "web-push-notification-sample",
+  "version": "1.0.0",
+  "description": "My Minimum Push Notification Sample",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "node ./scripts/post-install.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otiai10/web-push-notification-sample.git"
+  },
+  "keywords": [
+    "web",
+    "push",
+    "notification"
+  ],
+  "author": "otiai10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otiai10/web-push-notification-sample/issues"
+  },
+  "homepage": "https://github.com/otiai10/web-push-notification-sample#readme",
+  "dependencies": {
+    "web-push": "^3.2.2"
+  }
+}
